@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* Body */
+body {
+	font-family: source-sans-pro;
+	background-color: black;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+/* Container */
+.container {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	background-color: black;
+}
+
+#ctable {
+	margin-top: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+#city {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	letter-spacing: 9px;
+}
+
+#title {
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	letter-spacing: 4px;
+}
+
+.title {
+	background-color: black;
+	padding-top: 50px;
+}
+
+.red {color:red}
+
+#regionSK {
+	text-align: center;
+	color: #FFFFFF;
+	margin-top: 4px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#region_valueSK {
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 10px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#regionLK {
+	text-align: center;
+	color: #FFFFFF;
+	margin-top: 4px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#region_valueLK {
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 10px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
