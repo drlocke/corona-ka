@@ -10,20 +10,18 @@ function getIzidenzFromAPI(region, htmlValue) {
 	var counter = 10;
 	do {
 		let request = new XMLHttpRequest();
-		request.open("GET", "https://api.corona-zahlen.org/districts/" + region);
-		request.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				var icidenzNumber = JSON.parse(request.responseText)['data'][region]['weekIncidence'];
-				if (icidenzNumber > 50.00) {
-					document.getElementById(htmlValue).style.color = "red";
-				}
-				icidenzNumber = icidenzNumber.toFixed(2);
-				console.debug("icidenzNumber: " + icidenzNumber);
+		request.open("GET", "https://api.corona-zahlen.org/districts/" + region, false);
+		request.send();
+		if (request.status == 200) {
+			var icidenzNumber = JSON.parse(request.responseText)['data'][region]['weekIncidence'];
+			if (icidenzNumber > 50.00) {
+				document.getElementById(htmlValue).style.color = "red";
 			}
-			counter--;
-			console.debug("counter: " + counter);
-		};
+			icidenzNumber = icidenzNumber.toFixed(2);
+			console.debug("icidenzNumber: " + icidenzNumber);
+		}
+		counter--;
+		console.debug("counter: " + counter);
 	} while (icidenzNumber.localeCompare("unknown") == 0 && counter > 0);
 	document.getElementById(htmlValue).innerHTML = icidenzNumber;
-	request.send();
 }
