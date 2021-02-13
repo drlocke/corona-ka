@@ -7,7 +7,7 @@ function fillValues() {
 
 async function getIzidenzFromAPI(region, htmlValue) {
 	var icidenzNumber = "unknown";
-	var counter = 10;
+	var counter = 100;
 	do {
 		let request = new XMLHttpRequest();
 		request.open("GET", "https://api.corona-zahlen.org/districts/" + region, false);
@@ -19,6 +19,8 @@ async function getIzidenzFromAPI(region, htmlValue) {
 			}
 			icidenzNumber = icidenzNumber.toFixed(2);
 			console.debug("icidenzNumber: " + icidenzNumber);
+		} else {
+			await Sleep(100);
 		}
 		counter--;
 		console.debug("counter: " + counter);
