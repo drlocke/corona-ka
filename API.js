@@ -5,7 +5,7 @@ function fillValues() {
 	getIzidenzFromAPI("08215", "region_valueLK");
 }
 
-function getIzidenzFromAPI(region, htmlValue) {
+async function getIzidenzFromAPI(region, htmlValue) {
 	var icidenzNumber = "unknown";
 	var counter = 10;
 	do {
