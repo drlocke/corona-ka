@@ -6,10 +6,10 @@ function fillValues() {
 }
 
 function getIzidenzFromAPI(region, htmlValue) {
-	let request = new XMLHttpRequest();
 	var icidenzNumber = "unknown";
 	var counter = 10;
 	do {
+		let request = new XMLHttpRequest();
 		request.open("GET", "https://api.corona-zahlen.org/districts/" + region);
 		request.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
