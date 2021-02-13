@@ -21,7 +21,7 @@ function getIzidenzFromAPI(region, htmlValue) {
 			}
 			counter--;
 		};
-	} while (icidenzNumber.localeCompare("unknown") == 0 || counter > 0);
+	} while (icidenzNumber.localeCompare("unknown") == 0 && counter > 0);
 	document.getElementById(htmlValue).innerHTML = icidenzNumber;
 	request.send();
 }
