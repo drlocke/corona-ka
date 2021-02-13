@@ -20,10 +20,9 @@ function getIzidenzFromAPI(region, htmlValue) {
 				icidenzNumber = icidenzNumber.toFixed(2);
 				console.debug("icidenzNumber: " + icidenzNumber);
 			}
+			counter--;
+			console.debug("counter: " + counter);
 		};
-		counter--;
-		console.debug("counter: " + counter);
-		console.debug("outter icidenzNumber: " + icidenzNumber);
 	} while (icidenzNumber.localeCompare("unknown") == 0 && counter > 0);
 	document.getElementById(htmlValue).innerHTML = icidenzNumber;
 	request.send();
