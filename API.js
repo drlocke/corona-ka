@@ -15,7 +15,7 @@ async function getIzidenzFromAPI(region, htmlValue) {
 			request.send(null);
 			if (request.status == 200) {
 				var icidenzNumber = JSON.parse(request.responseText)['data'][region]['weekIncidence'];
-				if (icidenzNumber > 50.00) {
+				if (icidenzNumber > 100.00) {
 					document.getElementById(htmlValue).style.color = "red";
 				}
 				icidenzNumber = icidenzNumber.toFixed(2);
