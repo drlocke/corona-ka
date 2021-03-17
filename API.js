@@ -11,7 +11,7 @@ async function getIzidenzFromAPI(region, htmlValue) {
 	do {
 		try {
 			let request = new XMLHttpRequest();
-			request.open("GET", "https://api.corona-zahlen.org/districts/" + region, false);
+			request.open("GET", "http://193.196.38.120:8080/districts/" + region, false);
 			request.send(null);
 			if (request.status == 200) {
 				var icidenzNumber = JSON.parse(request.responseText)['data'][region]['weekIncidence'];
